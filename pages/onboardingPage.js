@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-import { DataGenerator } from '../Utility/datagenrator';
+import { DataGenerator } from '../utility/datagenrator';
 
 
 export class OnboardPage {
