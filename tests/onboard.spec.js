@@ -13,7 +13,7 @@ test.describe('Onboard Page Tests', () => {
         await expect(page).toHaveTitle(/LiveRecover/);
     });
 
-    test('Successful Onboard a User', async ({page}) => {
+    test('Test successful onboarding of a user', async ({page}) => {
         test.setTimeout(320000);
         await onboardPage.enterEmail();
         await onboardPage.emailAssertion();
@@ -39,7 +39,7 @@ test.describe('Onboard Page Tests', () => {
     });
 
 
-    test('Error Message Check for Duplicate Email', async ({page})=> {
+    test('Error Message Test', async ({page})=> {
         await onboardPage.duplicateEmail()
         await onboardPage.enterFirstName();
         await onboardPage.enterLastName();
