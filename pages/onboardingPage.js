@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test');
 import { DataGenerator } from '../utility/datagenrator';
+import testData from '../utility/testData.json'
 
 
 export class OnboardPage {
@@ -56,7 +57,7 @@ export class OnboardPage {
 
     async enterFirstName() {
         
-        await this.page.locator(this.weblocators.txt_fName).type('Hasnat');
+        await this.page.locator(this.weblocators.txt_fName).type(testData.Firstname);
     }
 
     async firstNameAssertion()
@@ -66,15 +67,15 @@ export class OnboardPage {
     }
 
     async enterLastName() {
-        await this.page.locator(this.weblocators.txt_lName).type('shoheb')
+        await this.page.locator(this.weblocators.txt_lName).type(testData.LastName)
     }
 
     async enterCompanyName() {
-        await this.page.locator(this.weblocators.txt_companyName).type('Selise')
+        await this.page.locator(this.weblocators.txt_companyName).type(testData.CompanyName)
     }
 
     async enterStoreURL() {
-        await this.page.locator(this.weblocators.txt_storeURL).type('Selise.com')
+        await this.page.locator(this.weblocators.txt_storeURL).type(testData.StoreURL)
     }
 
     async clickSubmitBtn() {
@@ -83,7 +84,7 @@ export class OnboardPage {
     }
     async enterPassword()
     {
-        await this.page.locator(this.weblocators.txt_createPass).type('1234567')
+        await this.page.locator(this.weblocators.txt_createPass).type(testData.PassWord)
        
     }
 
